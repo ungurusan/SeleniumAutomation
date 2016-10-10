@@ -2,7 +2,7 @@ package Tests;
 import Constants.LoginPageConstants;
 import Selectors.LoginPageSelectors;
 import org.junit.Assert;
-import org.junit.Test;
+import org.testng.annotations.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -13,13 +13,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by Alin on 10/10/2016.
  */
-public class LoginTest {
+public class LoginTest extends TestConfig{
 
     @Test
     public void loginTest(){
 
-        WebDriver driver = new FirefoxDriver();
-        WebDriverWait delay = new WebDriverWait(driver, 5);
+
 
         driver.navigate().to(LoginPageConstants.loginPage);
         delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(LoginPageSelectors.username)));
