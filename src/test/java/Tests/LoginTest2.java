@@ -13,13 +13,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by Alin on 10/10/2016.
  */
-public class LoginTest2 {
+public class LoginTest2 extends TestConfig{
 
     @Test
-    public void loginTest(){
+    public void loginTest2(){
 
-        WebDriver driver = new FirefoxDriver();
-        WebDriverWait delay = new WebDriverWait(driver, 5);
 
         driver.navigate().to(LoginPageConstants.loginPage);
         delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(LoginPageSelectors.username)));
@@ -31,8 +29,5 @@ public class LoginTest2 {
 
         driver.findElement(By.cssSelector(LoginPageSelectors.promoCloseButton)).click();
 
-
-        driver.close();
-        driver.quit();
     }
 }
