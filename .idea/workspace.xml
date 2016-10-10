@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="48effc29-e9ab-4dd0-90c8-8803c8ac5c67" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/Suite/TestSuite.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/TestSuite1/LoginTest.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/java/LoginTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/LoginTest.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Suite/TestSuite.java" afterPath="$PROJECT_DIR$/src/test/java/Suite/TestSuite.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-Suite.TestSuite.xml" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-Suite.TestSuite.xml" />
     </list>
     <ignored path="SeleniumAutomation.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="TestSuite.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/Suite/TestSuite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="510">
+              <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -119,8 +118,8 @@
         <option value="$PROJECT_DIR$/src/test/java/TestSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/LoginTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/Suite/TestSuiteTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Suite/TestSuite.java" />
         <option value="$PROJECT_DIR$/src/test/java/TestSuite1/LoginTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Suite/TestSuite.java" />
       </list>
     </option>
   </component>
@@ -968,8 +967,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Suite/TestSuite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="510">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
