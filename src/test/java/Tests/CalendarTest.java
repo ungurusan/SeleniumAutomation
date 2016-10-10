@@ -1,7 +1,5 @@
 package Tests;
-import Constants.LoginPageConstants;
 import Selectors.LoginPageSelectors;
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 
@@ -11,7 +9,7 @@ import org.openqa.selenium.By;
 public class CalendarTest extends TestConfig{
 
     @Test
-    public void loginTest2(){
+    public void calendarTest(){
 
         driver.findElement(By.cssSelector(LoginPageSelectors.calendar)).click();
 

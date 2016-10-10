@@ -1,39 +1,24 @@
 package Tests;
+import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.*;
-
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 
 public class TestConfig {
+    //Declared as public static to use same webdriver instance publicly
+    public static WebDriver driver = new FirefoxDriver();
 
-
-        WebDriver driver;
-        WebDriverWait delay;
-
+    //@BeforeSuite annotation describes this method has to run before all suites
     @BeforeSuite
-    public void testBeforeSuite() {
-        System.out.println("Starting driver!");
-        driver = new FirefoxDriver();
-        delay = new WebDriverWait(driver, 5);
+    public void setup() throws Exception {
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 
     }
-
+    //@AfterSuite annotation describes this method has to run after execution of all suites
     @AfterSuite
-    public void testAfterSuite() {
-        System.out.println("Closing driver!");
-        driver.close();
+    public void tearDown() throws Exception {
         driver.quit();
     }
-
-    @BeforeTest
-    public void testBeforeTest() {
-
-    }
-
-    @AfterTest
-    public void testAfterTest() {
-
-    }
-
 }

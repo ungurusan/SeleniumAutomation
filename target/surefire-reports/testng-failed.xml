@@ -3,19 +3,19 @@
 <suite verbose="0" name="Failed suite [Command line suite]">
   <test name="Command line test(failed)">
     <classes>
-      <class name="Tests.CalendarTest">
+      <class name="Tests.LoginTest">
         <methods>
           <include name="testAfterSuite"/>
           <include name="testBeforeTest"/>
           <include name="testBeforeSuite"/>
           <include name="testAfterTest"/>
         </methods>
-      </class> <!-- Tests.CalendarTest -->
-      <class name="Tests.LoginTest">
-        <methods>
-          <include name="loginTest"/>
-        </methods>
       </class> <!-- Tests.LoginTest -->
+      <class name="Tests.LoginTest2">
+        <methods>
+          <include name="loginTest2"/>
+        </methods>
+      </class> <!-- Tests.LoginTest2 -->
     </classes>
   </test> <!-- Command line test(failed) -->
 </suite> <!-- Failed suite [Command line suite] -->
