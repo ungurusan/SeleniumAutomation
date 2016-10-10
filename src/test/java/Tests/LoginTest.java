@@ -2,7 +2,7 @@ package Tests;
 import Constants.LoginPageConstants;
 import Selectors.LoginPageSelectors;
 import org.junit.Assert;
-import org.testng.annotations.*;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,7 +19,6 @@ public class LoginTest extends TestConfig{
     public void loginTest(){
 
 
-
         driver.navigate().to(LoginPageConstants.loginPage);
         delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(LoginPageSelectors.username)));
         Assert.assertTrue("Title doesn't contain 'Log in'", driver.getTitle().contains("Log in"));
@@ -30,8 +29,5 @@ public class LoginTest extends TestConfig{
 
         driver.findElement(By.cssSelector(LoginPageSelectors.promoCloseButton)).click();
 
-
-        driver.close();
-        driver.quit();
     }
 }

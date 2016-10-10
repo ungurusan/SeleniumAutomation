@@ -2,35 +2,38 @@ package Tests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.*;
 
 
 public class TestConfig {
 
-    WebDriver driver = new FirefoxDriver();
-    WebDriverWait delay = new WebDriverWait(driver, 5);
+
+        WebDriver driver;
+        WebDriverWait delay;
 
     @BeforeSuite
     public void testBeforeSuite() {
-        System.out.println("testBeforeSuite()");
+        System.out.println("Starting driver!");
+        driver = new FirefoxDriver();
+        delay = new WebDriverWait(driver, 5);
+
     }
 
     @AfterSuite
     public void testAfterSuite() {
-        System.out.println("testAfterSuite()");
+        System.out.println("Closing driver!");
+        driver.close();
+        driver.quit();
     }
 
     @BeforeTest
     public void testBeforeTest() {
-        System.out.println("testBeforeTest()");
+
     }
 
     @AfterTest
     public void testAfterTest() {
-        System.out.println("testAfterTest()");
+
     }
 
 }
