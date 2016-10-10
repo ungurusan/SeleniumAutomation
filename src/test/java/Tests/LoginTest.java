@@ -1,11 +1,13 @@
-package TestSuite1;
+package Tests;
 import Constants.LoginPageConstants;
 import Selectors.LoginPageSelectors;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import static Suite.TestSuite.*;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 /**
@@ -15,6 +17,9 @@ public class LoginTest {
 
     @Test
     public void loginTest(){
+
+        WebDriver driver = new FirefoxDriver();
+        WebDriverWait delay = new WebDriverWait(driver, 5);
 
         driver.navigate().to(LoginPageConstants.loginPage);
         delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(LoginPageSelectors.username)));
@@ -26,5 +31,8 @@ public class LoginTest {
 
         driver.findElement(By.cssSelector(LoginPageSelectors.promoCloseButton)).click();
 
+
+        driver.close();
+        driver.quit();
     }
 }
