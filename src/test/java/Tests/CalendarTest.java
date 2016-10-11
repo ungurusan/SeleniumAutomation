@@ -17,9 +17,10 @@ public class CalendarTest extends TestConfig{
 
     @Test
     public void calendarTest(){
-
+// go to homepage and click the calendar button
         driver.findElement(By.cssSelector(HomePageConstants.homePage)).click();
         driver.findElement(By.cssSelector(HomePageSelectors.calendar)).click();
+// go to my meetups and verify the correct title is displayed
         delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(CalendarSelectors.myMeetups)));
         driver.findElement(By.cssSelector(CalendarSelectors.myMeetups)).click();
         Assert.assertTrue(driver.getTitle().contains(CalendarConstants.calendarTitle), "Title doesn't contain:" + CalendarConstants.calendarTitle);

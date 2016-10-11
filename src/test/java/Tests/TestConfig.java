@@ -4,7 +4,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-
+//extended class for each test, atm only launches and quits the webdriver
 public class TestConfig {
 
     public static WebDriver driver = new FirefoxDriver();
