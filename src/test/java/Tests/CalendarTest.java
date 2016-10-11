@@ -1,7 +1,14 @@
 package Tests;
-import Selectors.LoginPageSelectors;
-import org.junit.Test;
+import Constants.CalendarConstants;
+import Constants.HomePageConstants;
+import Selectors.CalendarSelectors;
+import Selectors.HomePageSelectors;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
+
+
 
 /**
  * Created by Alin on 10/10/2016.
@@ -11,7 +18,10 @@ public class CalendarTest extends TestConfig{
     @Test
     public void calendarTest(){
 
-        driver.findElement(By.cssSelector(LoginPageSelectors.calendar)).click();
-
+        driver.findElement(By.cssSelector(HomePageConstants.homePage)).click();
+        driver.findElement(By.cssSelector(HomePageSelectors.calendar)).click();
+        delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(CalendarSelectors.myMeetups)));
+        driver.findElement(By.cssSelector(CalendarSelectors.myMeetups)).click();
+        Assert.assertTrue(driver.getTitle().contains(CalendarConstants.calendarTitle), "Title doesn't contain:" + CalendarConstants.calendarTitle);
     }
 }
