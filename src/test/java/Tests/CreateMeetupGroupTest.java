@@ -51,9 +51,7 @@ public class CreateMeetupGroupTest extends TestConfig{
         Assert.assertTrue(driver.findElement(By.cssSelector("ul[class=\"bullets margin--bottom\"]")).isDisplayed());
         delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(CreateMeetupSelectors.agreeContinue)));
         driver.findElement((By.cssSelector(CreateMeetupSelectors.agreeContinue))).click();
-// verify that a unlimited plan is available for selection
-        delay.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("a[data-tier=\"unlimited\"]")));
-        Assert.assertTrue(driver.findElement(By.cssSelector("a[data-tier=\"unlimited\"]")).isDisplayed());
+
 // to be continued
     }
 }
